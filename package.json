@@ -1,0 +1,28 @@
+{
+  "name": "danjordan.dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "debug": "DEBUG=* eleventy",
+    "serve": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Dan Jordan <dan@dan-jordan.co.uk>",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy-plugin-rss": "^1.0.6",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
+    "@types/clean-css": "^4.2.1",
+    "@types/html-minifier": "^3.5.3",
+    "@types/uglify-es": "^3.0.0",
+    "clean-css": "^4.2.1",
+    "eleventy-plugin-pwa": "^1.0.8",
+    "html-minifier": "^4.0.0",
+    "moment": "^2.24.0",
+    "uglify-es": "^3.3.9"
+  },
+  "repository": "git@bitbucket.org:danjordan/danjordan.dev.git"
+}

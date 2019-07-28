@@ -1,0 +1,17 @@
+{
+  "title": "Dan Jordan",
+  "url": "https://www.danjordan.dev/",
+  "description": "Dan Jordan is a Front-end Developer at Mindera UK",
+  "feed": {
+    "subtitle": "",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "url": "https://www.danjordan.dev/feed/feed.xml",
+    "id": "https://www.danjordan.dev/"
+  },
+  "author": {
+    "name": "Dan Jordan",
+    "email": "dan@dan-jordan.co.uk",
+    "github": "https://github.com/danjordan"
+  }
+}

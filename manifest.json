@@ -1,0 +1,10 @@
+{
+  "short_name": "Dan Jordan",
+  "name": "Dan Jordan",
+  "icons": [],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ffffff"
+}
