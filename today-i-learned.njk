@@ -1,16 +1,11 @@
 ---
 layout: layout.njk
-pagination:
-  data: collections.til
-  size: 5
-  reverse: true
-  alias: tils
 ---
 
 <h2>Today I Learned&hellip;</h2>
 
 <div class="articles">
-  {% for post in tils %}
+  {% for post in collections.til | reverse %}
   <article>
     <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
     <h1><a href="{{ post.url | url }}">{{ post.data.title }}</a></h1>

@@ -23,8 +23,14 @@
   <body>
     <header>
       <h1><a href="/">Dan Jordan</a></h1>
+    </header>
 
+    <main>{{ content | safe }}</main>
+    
+    <footer>
       <nav>
+        <a href="/today-i-learned">Today I Learned</a>
+        &nbsp;|&nbsp;
         <a
           href="https://twitter.com/danjordan"
           title="Twitter"
@@ -37,9 +43,7 @@
           rel="noreferrer noopener"
           target="_blank">GitHub</a>
       </nav>
-    </header>
-
-    <main>{{ content | safe }}</main>
+    </footer>
 
     {% set ga %} {% include "ga.js" %} {% endset %}
     <script>

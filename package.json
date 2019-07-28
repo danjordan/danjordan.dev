@@ -21,6 +21,7 @@
     "clean-css": "^4.2.1",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
+    "markdown-it": "^9.0.1",
     "moment": "^2.24.0",
     "uglify-es": "^3.3.9"
   },

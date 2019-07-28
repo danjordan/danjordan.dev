@@ -3,6 +3,7 @@ const moment = require("moment");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
+const markdownIt = require("markdown-it");
 const pluginPWA = require("eleventy-plugin-pwa");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -35,6 +36,12 @@ module.exports = eleventyConfig => {
     return moment(date)
       .utc()
       .format("YYYY-MM-DD");
+  });
+
+  eleventyConfig.addFilter("readableDate", dateObj => {
+    return moment(dateObj)
+      .utc()
+      .format("D MMMM YY");
   });
 
   eleventyConfig.addPassthroughCopy("css");
@@ -73,6 +80,15 @@ module.exports = eleventyConfig => {
       }
     }
   });
+
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true
+    })
+  );
 
   return {};
 };
