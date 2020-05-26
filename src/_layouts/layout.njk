@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ renderData.title or title or metadata.title }}</title>
+    <meta
+      name="description"
+      content="{{ renderData.description or description or metadata.description }}"
+    />
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}" />
+    {# <link rel="stylesheet" href="{{ '/css/dracula.css' | url }}" /> #}
+    <link
+      rel="alternate"
+      href="{{ metadata.feed.path | url }}"
+      type="application/atom+xml"
+      title="{{ metadata.title }}"
+    />
+    <link rel="manifest" href="{{ '/manifest.json' | url }}" />
+  </head>
+  <body>
+    <h1><a href="/">Dan Jordan</a></h1>
+
+    <nav>
+      <a href="https://twitter.com/danjordan" title="Twitter">Twitter</a>
+      &nbsp;|&nbsp;
+      <a href="https://github.com/danjordan" title="GitHub">GitHub</a>
+    </nav>
+
+    <main>{{ content | safe }}</main>
+
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{% if tils.length %}
+
+<h2>Recent posts</h2>
+
+{% for post in tils %}
+<article>
+  <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+</article>
+{% endfor %}
+
+{% endif %}

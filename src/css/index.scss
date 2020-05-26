@@ -1,0 +1,7 @@
+@import "./sakura-theme.scss";
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/sakura.css/scss/_main.scss";
+
+a:hover {
+  border-color: $color-fade;
+}
