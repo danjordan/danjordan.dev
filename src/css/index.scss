@@ -6,6 +6,11 @@ a:hover {
   border-color: $color-fade;
 }
 
+a:focus {
+  outline: 4px solid $color-fade;
+  outline-offset: 2px;
+}
+
 nav {
   margin-bottom: 4rem;
 }
