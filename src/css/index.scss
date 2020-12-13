@@ -2,11 +2,16 @@
 @import "../../node_modules/normalize.css/normalize.css";
 @import "../../node_modules/sakura.css/scss/_main.scss";
 
+a {
+  border-bottom: 2px solid;
+}
+
 a:hover {
-  border-color: $color-fade;
+  border-width: 0;
 }
 
 a:focus {
+  border-bottom: 0;
   outline: 4px solid $color-fade;
   outline-offset: 2px;
 }

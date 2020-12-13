@@ -8,5 +8,7 @@
 
 # TECHNOLOGY COLOPHON
 
-    font-awesome
+    sakura
     normalize.css
+    netlify
+    eleventy
