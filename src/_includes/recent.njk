@@ -1,11 +1,11 @@
-{% if tils.length %}
+{% if collections.tils.length %}
 
 <h2>Recent posts</h2>
 
-{% for post in tils %}
-<article>
-  <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
-</article>
+{% for post in collections.tils %}
+<ul>
+  <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+</ul>
 {% endfor %}
 
 {% endif %}
