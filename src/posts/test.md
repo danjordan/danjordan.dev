@@ -2,7 +2,8 @@
 title: Test
 date: 2019-05-09
 tags:
-  - til
+  - drafts
+eleventyExcludeFromCollections: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id ex vitae ipsum luctus ultrices. Nulla luctus nibh non tellus aliquet efficitur. Nam congue, leo in mollis scelerisque, velit eros efficitur ligula, vitae condimentum enim velit non ligula. Quisque blandit ligula nulla, tempor molestie est facilisis sed. Nullam vulputate ut diam quis semper. In tincidunt lacus in risus feugiat facilisis at eget sem. Sed placerat aliquam lacus vel egestas. Etiam tempus, mauris sit amet sollicitudin placerat, est odio interdum dui, vel condimentum diam tortor et dolor. In scelerisque massa ut sapien tristique, sit amet interdum orci sagittis. Praesent mi magna, viverra ut lacinia ac, faucibus in orci. Donec consequat, quam id faucibus iaculis, neque augue pharetra neque, ut ornare sapien neque sed enim. Nullam blandit, risus vel vulputate imperdiet, quam felis suscipit lorem, vitae sollicitudin sapien ipsum non sem.

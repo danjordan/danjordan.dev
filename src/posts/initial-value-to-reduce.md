@@ -1,8 +1,10 @@
 ---
-title: initial-value-to-reduce
 date: 2019-07-27
+slug: initial-value-to-reduce
 tags:
-  - til2
+  - drafts
+title: initial value to reduce
+eleventyExcludeFromCollections: true
 ---
 
 ```js

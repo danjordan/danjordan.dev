@@ -2,7 +2,8 @@
 title: URLSearchParams
 date: 2019-07-29
 tags:
-  - til2
+  - drafts
+eleventyExcludeFromCollections: true
 ---
 
 ```js
