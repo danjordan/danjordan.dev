@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
 ```js
 const ints = [1, 2, 3];
 
-const odds = ints.reduce((accumulator, currentValue) => {
+const sum = ints.reduce((accumulator, currentValue) => {
   return accumulator + currentValue;
 }, 0);
 ```
@@ -20,7 +20,7 @@ But...
 ```js
 const ints = [{ value: 1 }, { value: 2 }, { value: 3 }];
 
-const odds = ints.reduce((accumulator, currentValue) => {
+const sum = ints.reduce((accumulator, currentValue) => {
   return accumulator + currentValue.value;
 });
 ```

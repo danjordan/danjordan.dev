@@ -1,7 +1,8 @@
 const fs = require("fs");
+const path = require("path");
 const moment = require("moment");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSass = require("eleventy-plugin-sass");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 
@@ -31,6 +32,7 @@ module.exports = (eleventyConfig) => {
     watch: ["src/**/*.{scss,sass}", "!node_modules/**"],
   });
 
+  eleventyConfig.addPassthroughCopy("src/js/index.js");
   eleventyConfig.addPassthroughCopy("src/browserconfig.xml");
   eleventyConfig.addPassthroughCopy("src/humans.txt");
   eleventyConfig.addPassthroughCopy("src/manifest.json");
