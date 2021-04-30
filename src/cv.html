@@ -4,13 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV | Dan Jordan</title>
+
+    <link rel="stylesheet" href="/css/cv.css" />
+
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+
     <meta
       name="description"
       content="{{ renderData.description or description or metadata.description }}"
     />
-    <meta name="theme-color" content="#ffffff">
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/css/cv.css" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
     <main class="page">
@@ -117,14 +124,15 @@
       </section>
     </main>
     <script>
-      window.ga = function() {
+      window.ga = function () {
         ga.q.push(arguments);
       };
       ga.q = [];
       ga.l = +new Date();
       ga("create", "UA-6294877-1", "auto");
-      ga("send", "pageview");</script
-    ><script
+      ga("send", "pageview");
+    </script>
+    <script
       src="https://www.google-analytics.com/analytics.js"
       async
       defer
