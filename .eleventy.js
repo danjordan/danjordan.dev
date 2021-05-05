@@ -34,6 +34,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPassthroughCopy("src/js/index.js");
   eleventyConfig.addPassthroughCopy("src/browserconfig.xml");
+  eleventyConfig.addPassthroughCopy("src/favicon.svg");
   eleventyConfig.addPassthroughCopy("src/humans.txt");
   eleventyConfig.addPassthroughCopy("src/manifest.json");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
