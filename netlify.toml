@@ -5,7 +5,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data:"
+    Content-Security-Policy = "default-src 'self'"
     Referrer-Policy = "strict-origin"
     X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
