@@ -2,6 +2,10 @@
 @import "../../node_modules/sakura.css/scss/_main.scss";
 @import "./dracula.scss";
 
+body {
+  max-width: 40em;
+}
+
 a {
   border-bottom: 2px solid;
 }
@@ -16,8 +20,25 @@ a:focus {
   outline-offset: 2px;
 }
 
+h1 {
+  text-align: center;
+}
+
 nav {
   margin-bottom: 4rem;
+  text-align: center;
+}
+
+article h1 {
+  margin-bottom: 4rem;
+}
+
+pre[class*="language-"] {
+  margin-bottom: 2.5rem;
+}
+
+table {
+  margin-bottom: 2.5rem;
 }
 
 @media (max-width: 684px) {

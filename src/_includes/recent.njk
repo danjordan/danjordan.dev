@@ -2,7 +2,7 @@
 
 <h2>Recent posts</h2>
 
-{% for post in collections.tils %}
+{% for post in collections.tils | reverse %}
 <ul>
   <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
 </ul>
