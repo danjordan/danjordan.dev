@@ -60,7 +60,7 @@ This means that your cache stores the file contents next to the file's URL, and 
 
 **Cache Key:**
 
-`https://example.com___https://code.jquery.com/jquery-3.6.0.min.js`
+`https://example.com, https://code.jquery.com/jquery-3.6.0.min.js`
 
 **File Contents:**
 
