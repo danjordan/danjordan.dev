@@ -1,9 +1,9 @@
 ---
 date: 2021-05-23
-slug: should-i-host-react-from-a-cdn
+slug: should-i-host-jquery-from-a-cdn
 tags:
   - tils
-title: Should I host React from a CDN?
+title: Should I host jQuery from a CDN?
 eleventyExcludeFromCollections: false
 ---
 
@@ -87,7 +87,7 @@ fetch(url, {
 });
 ```
 
-So, should I host React from a CDN?
+So, should I host jQuery from a CDN?
 
 Almost certainly no.
 
