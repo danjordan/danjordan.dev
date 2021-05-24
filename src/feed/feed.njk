@@ -8,15 +8,15 @@ eleventyExcludeFromCollections: true
 	<subtitle>{{ metadata.feed.subtitle }}</subtitle>
 	<link href="{{ metadata.feed.url }}" rel="self"/>
 	<link href="{{ metadata.url }}"/>
-	{% if (collections.til.length) %}
-	<updated>{{ collections.til | rssLastUpdatedDate }}</updated>
+	{% if (collections.tils.length) %}
+	<updated>{{ collections.tils | rssLastUpdatedDate }}</updated>
 	{% endif %}
 	<id>{{ metadata.feed.id }}</id>
 	<author>
 		<name>{{ metadata.author.name }}</name>
 		<email>{{ metadata.author.email }}</email>
 	</author>
-	{%- for post in collections.til %}
+	{%- for post in collections.tils %}
 	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
 	<entry>
 		<title>{{ post.data.title }}</title>
