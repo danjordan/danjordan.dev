@@ -1,6 +1,6 @@
-@import "./sakura-theme.scss";
+@import "_sakura-theme.scss";
 @import "../../node_modules/sakura.css/scss/_main.scss";
-@import "./dracula.scss";
+@import "./_dracula.scss";
 
 body {
   max-width: 40em;
@@ -51,4 +51,8 @@ table {
   body {
     font-size: $font-size-base;
   }
+}
+
+.asdfasfasf {
+  background-color: red;
 }

@@ -1,5 +1,4 @@
 const fs = require("fs");
-const path = require("path");
 const moment = require("moment");
 const pluginSass = require("eleventy-plugin-sass");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -27,10 +26,10 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPlugin(inclusiveLangPlugin);
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginSass, {
     watch: ["src/**/*.{scss,sass}", "!node_modules/**"],
   });
+  eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
   eleventyConfig.addPassthroughCopy("src/js/index.js");
   eleventyConfig.addPassthroughCopy("src/browserconfig.xml");
