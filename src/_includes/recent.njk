@@ -1,9 +1,9 @@
-{% if collections.tils.length %}
+{% if collections.posts.length %}
 
 <h2>Recent posts</h2>
 
 <ul>
-{% for post in collections.tils | reverse %}
+{% for post in collections.posts | reverse %}
   <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
 {% endfor %}
 </ul>

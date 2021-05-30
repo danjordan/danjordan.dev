@@ -2,7 +2,7 @@
 date: 2021-05-23
 slug: should-i-host-jquery-from-a-cdn
 tags:
-  - tils
+  - posts
 title: Should I host jQuery from a CDN?
 eleventyExcludeFromCollections: false
 ---

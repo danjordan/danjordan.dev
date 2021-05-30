@@ -2,7 +2,7 @@
 date: 2020-01-20
 slug: sharing-git-diffs
 tags:
-  - tils
+  - posts
 title: Sharing Git Diffs
 ---
 
