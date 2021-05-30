@@ -37,7 +37,7 @@ Node v10 shipped with a `--async-stack-traces` flag that fixed this issue by pro
 
 ---
 
-When we use `await` the current function is added to the call stack until the promise has resolved. This addition to the call stack comes at the cost of an extra microtask. On thte surface this would seem to have a small performance benefit, but are there any downsides?
+When we use `await` the current function is added to the call stack until the promise has resolved. This addition to the call stack comes at the cost of an extra microtask. On the surface this would seem to have a small performance benefit, but are there any downsides?
 
 Yes, if we don't use `await` the function won't show up in stack traces when an error is thrown.
 
