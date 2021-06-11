@@ -4,7 +4,6 @@ slug: should-i-host-jquery-from-a-cdn
 tags:
   - posts
 title: Should I host jQuery from a CDN?
-eleventyExcludeFromCollections: false
 ---
 
 A long time ago, it was advised to serve common JavaScript libraries or frameworks from a third party CDN (Content Delivery Network) rather than from your own domain.
