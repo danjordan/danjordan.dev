@@ -8,6 +8,10 @@ const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 moment.locale("en");
 
 module.exports = (eleventyConfig) => {
+  eleventyConfig.addFilter("take", (arr = [], num) => {
+    return arr.slice(0, num);
+  });
+
   eleventyConfig.addFilter("toIsoString", (date) => {
     return moment(date).toISOString();
   });
@@ -31,7 +35,7 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-  eleventyConfig.addPassthroughCopy("src/js/index.js");
+  // eleventyConfig.addPassthroughCopy("src/js/index.js");
   eleventyConfig.addPassthroughCopy("src/browserconfig.xml");
   eleventyConfig.addPassthroughCopy("src/favicon.svg");
   eleventyConfig.addPassthroughCopy("src/humans.txt");
