@@ -28,6 +28,12 @@
     <meta name="theme-color" content="#2e3037">
   </head>
   <body>
+    <div id="skiplink-container">
+      <div>
+        <a class="skiplink" href="#maincontent">Skip to main content</a>
+      </div>
+    </div>
+
     <h1><a href="/">Dan Jordan</a></h1>
 
     <nav>
@@ -36,8 +42,6 @@
       <a href="https://github.com/danjordan" title="GitHub">GitHub</a>
     </nav>
 
-    <main>{{ content | safe }}</main>
-
-    {% include "analytics.njk" %}
+    <main id="maincontent">{{ content | safe }}</main>
   </body>
 </html>

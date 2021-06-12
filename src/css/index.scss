@@ -56,3 +56,27 @@ table {
 .asdfasfasf {
   background-color: red;
 }
+
+.skiplink {
+  position: absolute;
+  left: -9999em;
+}
+
+.skiplink:focus {
+  left: 0;
+  z-index: 1;
+}
+
+#skiplink-container {
+  text-align: center;
+}
+
+#skiplink-container div {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 1020px;
+}
+
+#skiplink-container .skiplink {
+  margin-left: 0.75rem;
+}
