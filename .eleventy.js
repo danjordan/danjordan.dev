@@ -1,31 +1,20 @@
 const fs = require("fs");
-const moment = require("moment");
+const htmlmin = require("html-minifier");
+const format = require("date-fns/format");
 const pluginSass = require("eleventy-plugin-sass");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const zonedTimeToUtc = require("date-fns-tz/zonedTimeToUtc");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
-
-moment.locale("en");
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter("take", (arr = [], num) => {
     return arr.slice(0, num);
   });
 
-  eleventyConfig.addFilter("toIsoString", (date) => {
-    return moment(date).toISOString();
-  });
-
-  eleventyConfig.addFilter("toLocale", (date) => {
-    return moment(date).format("LL");
-  });
-
   eleventyConfig.addFilter("toIsoStringShort", (date) => {
-    return moment(date).utc().format("YYYY-MM-DD");
-  });
-
-  eleventyConfig.addFilter("toHumanReadable", (dateObj) => {
-    return moment(dateObj).utc().format("Mo MMMM YYYY");
+    const utc = zonedTimeToUtc(date);
+    return format(utc, "yyyy-MM-dd");
   });
 
   eleventyConfig.addPlugin(inclusiveLangPlugin);
@@ -41,6 +30,20 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("src/humans.txt");
   eleventyConfig.addPassthroughCopy("src/manifest.json");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+    if (outputPath && outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
+
+    return content;
+  });
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
