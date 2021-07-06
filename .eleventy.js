@@ -25,6 +25,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
   // eleventyConfig.addPassthroughCopy("src/js/index.js");
+  eleventyConfig.addPassthroughCopy("src/_headers");
   eleventyConfig.addPassthroughCopy("src/browserconfig.xml");
   eleventyConfig.addPassthroughCopy("src/favicon.svg");
   eleventyConfig.addPassthroughCopy("src/humans.txt");

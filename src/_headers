@@ -1,0 +1,5 @@
+/*
+  Permissions-Policy: default 'none'
+  Referrer-Policy: no-referrer-when-downgrade
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
