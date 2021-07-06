@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy-Report-Only: default-src 'self'
+  Content-Security-Policy: default-src 'self' https://microanalytics.io/
   Permissions-Policy: default 'none'
   Referrer-Policy: no-referrer-when-downgrade
   X-Content-Type-Options: nosniff
