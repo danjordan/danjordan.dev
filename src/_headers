@@ -1,4 +1,5 @@
 /*
+  Content-Security-Policy-Report-Only: default-src 'self'
   Permissions-Policy: default 'none'
   Referrer-Policy: no-referrer-when-downgrade
   X-Content-Type-Options: nosniff
