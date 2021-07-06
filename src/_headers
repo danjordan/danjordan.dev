@@ -1,6 +1,6 @@
 /*
   Content-Security-Policy: default-src 'self' https://microanalytics.io/
-  Permissions-Policy: default 'none'
+  Permissions-Policy: accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=()
   Referrer-Policy: no-referrer-when-downgrade
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
