@@ -14,7 +14,7 @@
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.2",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
     "date-fns": "^2.22.1",
     "date-fns-tz": "^1.1.4",
     "dracula-prism": "^2.1.4",
@@ -25,6 +25,6 @@
   },
   "repository": "git@github.com:danjordan/danjordan.dev.git",
   "devDependencies": {
-    "@types/html-minifier": "^4.0.0"
+    "@types/html-minifier": "^4.0.1"
   }
 }

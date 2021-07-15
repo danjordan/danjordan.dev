@@ -5,7 +5,7 @@ const pluginSass = require("eleventy-plugin-sass");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const zonedTimeToUtc = require("date-fns-tz/zonedTimeToUtc");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+const pluginInclusiveLanguage = require("@11ty/eleventy-plugin-inclusive-language");
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter("take", (arr = [], num) => {
@@ -17,7 +17,7 @@ module.exports = (eleventyConfig) => {
     return format(utc, "yyyy-MM-dd");
   });
 
-  eleventyConfig.addPlugin(inclusiveLangPlugin);
+  eleventyConfig.addPlugin(pluginInclusiveLanguage);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSass, {
     watch: ["src/**/*.{scss,sass}", "!node_modules/**"],
@@ -25,6 +25,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
   // eleventyConfig.addPassthroughCopy("src/js/index.js");
+  eleventyConfig.addPassthroughCopy("src/img/1px.png");
   eleventyConfig.addPassthroughCopy("src/_headers");
   eleventyConfig.addPassthroughCopy("src/browserconfig.xml");
   eleventyConfig.addPassthroughCopy("src/favicon.svg");
