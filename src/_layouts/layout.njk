@@ -14,6 +14,11 @@
       content="{{ renderData.description or description or metadata.description }}"
     />
     <meta property="og:title" content="{{ renderData.title or title or metadata.title }}">
+    
+    {% if title %}
+    <meta property="og:image" content="https://res.cloudinary.com/danjordan/w_1200,f_auto/l_text:Helvetica_40_bold_center:{{ title | urlencode }},co_rgb:ebe5ce,c_fit,w_720/bg.jpg">
+    {% endif %}
+    
     <meta property="og:description" content="{{ renderData.description or description or metadata.description }}">
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">
