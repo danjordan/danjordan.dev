@@ -21,7 +21,8 @@ a:focus {
   outline-offset: 2px;
 }
 
-h1 {
+header {
+  @extend h1;
   text-align: center;
 }
 
