@@ -24,7 +24,7 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-  // eleventyConfig.addPassthroughCopy("src/js/index.js");
+  eleventyConfig.addPassthroughCopy("src/js/index.js");
   eleventyConfig.addPassthroughCopy("src/img/1px.png");
   eleventyConfig.addPassthroughCopy("src/_headers");
   eleventyConfig.addPassthroughCopy("src/browserconfig.xml");

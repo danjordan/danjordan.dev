@@ -5,3 +5,4 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
+  Origin-Trial: JzRMmGzE9z8nv1eK3T2QCJgDdIPw4AAABseyJvcmlnaW4iOiJodHRwczovL2RhbmpvcmRhbi5kZXY6NDQzIiwiZmVhdHVyZSI6IkRvY3VtZW50VHJhbnNpdGlvbiIsImV4cGlyeSI6MTYzNDA4MzE5OSwiaXNTdWJkb21haW4iOnRydWV9

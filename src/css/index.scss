@@ -23,10 +23,13 @@ a:focus {
 
 header {
   @extend h1;
+  contain: paint;
   text-align: center;
+  padding: 8px 0;
 }
 
 nav {
+  contain: paint;
   margin-bottom: 4rem;
   text-align: center;
 }
