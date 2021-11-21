@@ -2,22 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
     <title>CV | Dan Jordan</title>
 
-    <link rel="stylesheet" href="/css/cv.css" />
+    <link rel="icon" href="{{ '/favicon.svg' | url }}" />
 
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="{{ '/css/cv.css' | url }}" />
 
     <meta
       name="description"
+      content="{{ renderData.description or description or metadata.description }}"
+    />
+
+    <meta
+      property="og:description"
       content="{{ renderData.description or description or metadata.description }}"
     />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:type" content="website" />
 
     <meta name="format-detection" content="telephone=no" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#fffaf0" />
   </head>
   <body>
     <main class="page">
@@ -34,56 +39,73 @@
       <hr />
       <section>
         <h2>Work history</h2>
-        <h4>Mindera, Leicester</h4>
-        <h5>Front-end Developer - August 2018 &ndash; Present</h5>
-        <h5>Skills: JavaScript, React, Redux, Jest, Git, Agile</h5>
+        <h3>Mindera, Leicester</h3>
+        <h4>Front-end Developer - August 2018 &ndash; Present</h4>
+        <h4>Skills: JavaScript, React, Redux, Jest, Git, Agile, AWS</h4>
         <p>
-          Working with both remote and local agile teams to implement features
-          for multiple e-commerce clients. Writing tests for features and
-          components and performing code review for both developers in my team
-          and other teams. As part of the agile process attending daily
-          stand-ups, planning sessions and retrospective meetings.
+          Worked with both remote and local agile teams to implement front-end
+          features for high end fashion and home furnishings eCommerce clients.
+          Contributed to a number of microservices built with AWS services
+          including Lambda, DynamoDB, SQS and SNS. Most notably a service that
+          provides estimated delivery dates for products and orders.
         </p>
-        <h4>Signature Digital Studios, Wigston</h4>
-        <h5>Web Developer - May 2011 &ndash; August 2018</h5>
-        <h5>
+        <p>
+          Wrote tests for both back-end and front-end features and performed
+          code review ane mentorship for developers in my team and other teams.
+          Helped advance frontend practices by volunteering for a working group
+          dedicated to improving the developer and user experience of the
+          customer facing website.
+        </p>
+        <p>
+          As part of the agile process contributed in daily stand-ups, planning
+          sessions and retrospective meetings to continually improve our ways of
+          working.
+        </p>
+        <h3>Signature Digital Studios, Wigston</h3>
+        <h4>Web Developer - May 2011 &ndash; August 2018</h4>
+        <h4>
           Skills: JavaScript, React, Redux, Jest, PHP, Laravel, MySQL, AWS, Git
-        </h5>
+        </h4>
         <p>
           Initially employed to work on PhoneGap applications for Android and
           iOS. With time advanced to building and maintaining JavaScript
-          applications with ReactJS and recently collaborated with a
-          telecommunications company to build a Node.js application to integrate
-          with their telephone payment system. Also developed PHP applications
-          for large multinational pharmaceutical companies, including
-          administrative systems, external API integration and RESTful APIs for
-          consumption by iOS applications.
+          applications with ReactJS and later collaborated with a
+          telecommunications company to build a Node.js application that
+          integrated with their telephone payment system.
         </p>
-        <h4>Impact Web Solutions, Leicester</h4>
-        <h5>Web Developer - May 2009 &ndash; May 2011</h5>
-        <h5>
+        <p>
+          Developed PHP applications for large multinational pharmaceutical
+          companies, including administrative systems, external API integration
+          and RESTful APIs for consumption by iOS applications.
+        </p>
+        <h3>Impact Web Solutions, Leicester</h3>
+        <h4>Web Developer - May 2009 &ndash; May 2011</h4>
+        <h4>
           Skills: HTML, CSS, JavaScript, jQuery, Web Performance, Magento,
           Photoshop, Client support
-        </h5>
+        </h4>
         <p>
-          Building brochure websites in an open source PHP CMS system using the
-          Smarty templating language. Introduced testing the performance of
-          websites to increase page load speeds and using YSlow and Google Page
-          Speed. Used Photoshop to improve images and site assets for both
-          performance and visibility. Experience with Magento platform to create
-          templates for eCommerce sites. Developed customer liaison and client
-          support skills including using Basecamp for project management.
+          Built brochure websites in an open source PHP CMS using the Smarty
+          templating language. Introduced performance testing of websites to
+          increase page load speeds using YSlow and Google Page Speed. Used
+          Photoshop to improve images and site assets for both performance and
+          visibility.
         </p>
-        <h4>Caged Fish Web Design, Market Harborough</h4>
-        <h5>Junior Web Developer - June 2007 &ndash; May 2009</h5>
-        <h5>
-          Skills: HTML, CSS, Javascript, Prototypejs, jQuery, Email templates,
+        <p>
+          Experience with Magento platform to create templates for eCommerce
+          sites. Developed customer liaison and client support skills including
+          using Basecamp for project management.
+        </p>
+        <h3>Caged Fish Web Design, Market Harborough</h3>
+        <h4>Junior Web Developer - June 2007 &ndash; May 2009</h4>
+        <h4>
+          Skills: HTML, CSS, JavaScript, Prototypejs, jQuery, Email templates,
           ASP, Actinic
-        </h5>
+        </h4>
         <p>
           Converting Photoshop designs into WordPress, Actinic and static
           templates using HTML, CSS and JavaScript to enhance usability of the
-          sites. Coding PHP within WordPress to add additional features to the
+          sites. Writing PHP within WordPress to add additional features to the
           admin panel. Creation of email marketing templates, including a system
           built in ASP to send emails to a mailing list.
         </p>
@@ -91,8 +113,8 @@
       <hr />
       <section>
         <h2>Education</h2>
-        <h4>Keele University, Staffordshire</h4>
-        <h5>September 2005 &ndash; May 2007</h5>
+        <h3>Keele University, Staffordshire</h3>
+        <h4>September 2005 &ndash; May 2007</h4>
         <ul>
           <li>Studied Mathematics &mdash; course incomplete</li>
           <li>
@@ -100,8 +122,8 @@
             Programming (Java) and Web Design
           </li>
         </ul>
-        <h4>Robert Smyth School, Market Harborough</h4>
-        <h5>2001 &ndash; 2005</h5>
+        <h3>Robert Smyth School, Market Harborough</h3>
+        <h4>2001 &ndash; 2005</h4>
         <ul>
           <li>A-Levels in Mathematics, ICT, Geography and General Studies</li>
           <li>AS-Level in Business Studies</li>
@@ -115,11 +137,11 @@
       <section>
         <h2>Interests</h2>
         <p>
-          I am passionate about music and regularly attend live shows and
-          festivals. In addition to this, I have played basketball for many
-          years and currently play in the Leicestershire league, as well as
-          taking a keen interest in the national league where I am a season
-          ticket holder for the Leicester Riders.
+          I am passionate about music and regularly attend live shows. In
+          addition to this, I have played basketball for many years and recently
+          played in the local Leicestershire league, as well as taking a keen
+          interest in the British league where I am a season ticket holder at
+          the Leicester Riders.
         </p>
       </section>
     </main>

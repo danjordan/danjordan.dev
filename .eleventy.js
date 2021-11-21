@@ -24,7 +24,6 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-  // eleventyConfig.addPassthroughCopy("src/js/index.js");
   eleventyConfig.addPassthroughCopy("src/img/1px.png");
   eleventyConfig.addPassthroughCopy("src/_headers");
   eleventyConfig.addPassthroughCopy("src/browserconfig.xml");
@@ -33,9 +32,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("src/manifest.json");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if (outputPath && outputPath.endsWith(".html")) {
+  eleventyConfig.addTransform("htmlmin", function (content) {
+    if (this.outputPath && this.outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
