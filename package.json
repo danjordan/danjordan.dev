@@ -11,7 +11,7 @@
   "author": "Dan Jordan <dan@dan-jordan.co.uk>",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0-canary.44",
+    "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3",
