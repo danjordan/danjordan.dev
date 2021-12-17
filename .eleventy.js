@@ -32,8 +32,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("src/manifest.json");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
-  eleventyConfig.addTransform("htmlmin", function (content) {
-    if (this.outputPath && this.outputPath.endsWith(".html")) {
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
