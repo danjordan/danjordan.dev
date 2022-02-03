@@ -1,7 +1,8 @@
-const fs = require("fs");
+const sass = require("sass");
+const fs = require("node:fs");
+const path = require("node:path");
 const htmlmin = require("html-minifier");
 const format = require("date-fns/format");
-const pluginSass = require("eleventy-plugin-sass");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const zonedTimeToUtc = require("date-fns-tz/zonedTimeToUtc");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -19,9 +20,6 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPlugin(pluginInclusiveLanguage);
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginSass, {
-    watch: ["src/**/*.{scss,sass}", "!node_modules/**"],
-  });
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
   eleventyConfig.addPassthroughCopy("src/img/1px.png");
@@ -31,6 +29,27 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("src/humans.txt");
   eleventyConfig.addPassthroughCopy("src/manifest.json");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+  eleventyConfig.addTemplateFormats("scss");
+  eleventyConfig.addExtension("scss", {
+    outputFileExtension: "css", // optional, default: "html"
+
+    // `compile` is called once per .scss file in the input directory
+    compile: function (inputContent, inputPath) {
+      let parsed = path.parse(inputPath);
+
+      if (!parsed.base.startsWith("_")) {
+        let result = sass.compileString(inputContent, {
+          loadPaths: [parsed.dir || ".", this.config.dir.includes],
+        });
+
+        // This is the render function, `data` is the full data cascade
+        return (data) => {
+          return result.css;
+        };
+      }
+    },
+  });
 
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
