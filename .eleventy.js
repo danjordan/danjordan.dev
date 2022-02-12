@@ -38,16 +38,16 @@ module.exports = (eleventyConfig) => {
     compile: function (inputContent, inputPath) {
       let parsed = path.parse(inputPath);
 
-      if (!parsed.base.startsWith("_")) {
-        let result = sass.compileString(inputContent, {
-          loadPaths: [parsed.dir || ".", this.config.dir.includes],
-        });
+      if (parsed.base.startsWith("_")) return;
 
-        // This is the render function, `data` is the full data cascade
-        return (data) => {
-          return result.css;
-        };
-      }
+      let result = sass.compileString(inputContent, {
+        loadPaths: [parsed.dir || ".", this.config.dir.includes],
+      });
+
+      // This is the render function, `data` is the full data cascade
+      return () => {
+        return result.css;
+      };
     },
   });
 
@@ -84,5 +84,6 @@ module.exports = (eleventyConfig) => {
       input: "src",
       layouts: "_layouts",
     },
+    htmlTemplateEngine: "njk",
   };
 };

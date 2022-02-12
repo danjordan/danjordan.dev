@@ -2,6 +2,7 @@
 @import "sakura-theme";
 @import "../../node_modules/sakura.css/scss/_main";
 @import "../../node_modules/dracula-prism/dist/css/dracula-prism";
+@import "utils";
 
 body {
   max-width: 60ch;
@@ -33,7 +34,6 @@ nav {
 
 article h1 {
   margin-bottom: 4rem;
-  text-align: center;
 }
 
 pre[class*="language-"] {
