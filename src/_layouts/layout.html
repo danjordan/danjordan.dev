@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>{{ renderData.title or title or metadata.title }}</title>
 
-    <link rel="icon" href="{{ '/favicon.svg' | url }}">
-    
+    <link rel="icon" href="{{ '/favicon.svg' | url }}" />
+
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}" />
 
     {% for post in collections.posts | reverse | take(5) %}
@@ -17,15 +17,24 @@
       name="description"
       content="{{ renderData.description or description or metadata.description }}"
     />
-    <meta property="og:title" content="{{ renderData.title or title or metadata.title }}">
-    
+    <meta
+      property="og:title"
+      content="{{ renderData.title or title or metadata.title }}"
+    />
+
     {% if title %}
-    <meta property="og:image" content="https://res.cloudinary.com/danjordan/w_1200,f_auto/l_text:Helvetica_60_bold_center:{{ title | urlencode }},co_rgb:ebe5ce,c_fit,w_720/bg.jpg">
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/danjordan/w_1200,f_auto/l_text:Helvetica_60_bold_center:{{ title | urlencode }},co_rgb:ebe5ce,c_fit,w_720/bg.jpg"
+    />
     {% endif %}
-    
-    <meta property="og:description" content="{{ renderData.description or description or metadata.description }}">
-    <meta property="og:locale" content="en_GB">
-    <meta property="og:type" content="website">
+
+    <meta
+      property="og:description"
+      content="{{ renderData.description or description or metadata.description }}"
+    />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
 
     <link
       type="application/atom+xml"
@@ -34,7 +43,7 @@
       title="{{ metadata.title }}"
     />
     <link rel="manifest" href="{{ '/manifest.json' | url }}" />
-    <meta name="theme-color" content="#2e3037">
+    <meta name="theme-color" content="#2e3037" />
   </head>
   <body>
     <div id="skiplink-container">
@@ -54,5 +63,11 @@
     </nav>
 
     <main id="maincontent">{{ content | safe }}</main>
+
+    <footer>
+      Built with <a href="https://www.11ty.dev/">Eleventy</a>. Hosted on
+      <a href="https://www.netlify.com/">Netlify</a>. Source code on
+      <a href="https://github.com/">GitHub</a>.
+    </footer>
   </body>
 </html>
