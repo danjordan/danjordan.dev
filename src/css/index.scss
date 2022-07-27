@@ -22,6 +22,10 @@ a:focus {
   outline-offset: 2px;
 }
 
+a:visited {
+  color: $color-blossom;
+}
+
 header {
   @extend h1;
   text-align: center;
