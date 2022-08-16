@@ -1,11 +1,11 @@
 {% if collections.posts.length %}
 
-<h2>Recent posts</h2>
+<h1>Recent posts</h1>
 
 <ul>
-{% for post in collections.posts | reverse | take(5) %}
+  {% for post in collections.posts | reverse | take(5) %}
   <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
-{% endfor %}
+  {% endfor %}
 </ul>
 
 {% endif %}
