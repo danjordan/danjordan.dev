@@ -12,6 +12,10 @@ a {
   border-bottom: 2px solid;
 }
 
+a:visited {
+  color: $color-blossom;
+}
+
 a:hover {
   border-width: 0;
 }
@@ -20,10 +24,6 @@ a:focus {
   border-bottom: 0;
   outline: 4px solid $color-fade;
   outline-offset: 2px;
-}
-
-a:visited {
-  color: $color-blossom;
 }
 
 header {
