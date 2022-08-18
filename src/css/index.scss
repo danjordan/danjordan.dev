@@ -22,10 +22,12 @@ a:visited {
 
 a:hover {
   border-width: 0;
+  color:$color-fade;
 }
 
 a:focus {
   border-bottom: 0;
+  color:$color-fade;
   outline: 4px solid $color-fade;
   outline-offset: 2px;
 }
