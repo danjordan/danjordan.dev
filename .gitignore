@@ -1,3 +1,4 @@
+.netlify/
 _site
-
+netlify/edge-functions/_generated
 node_modules

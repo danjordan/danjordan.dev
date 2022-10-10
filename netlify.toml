@@ -1,3 +1,7 @@
+[[edge_functions]]
+  function = "eleventy-edge"
+  path = "/*"
+
 [build]
   publish = "_site"
   command = "npm run build"
