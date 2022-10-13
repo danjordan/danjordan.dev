@@ -4,7 +4,6 @@ const path = require("node:path");
 const htmlmin = require("html-minifier");
 const format = require("date-fns/format");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const { EleventyEdgePlugin } = require("@11ty/eleventy");
 const zonedTimeToUtc = require("date-fns-tz/zonedTimeToUtc");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginInclusiveLanguage = require("@11ty/eleventy-plugin-inclusive-language");
@@ -19,7 +18,6 @@ module.exports = (eleventyConfig) => {
     return format(utc, "yyyy-MM-dd");
   });
 
-  eleventyConfig.addPlugin(EleventyEdgePlugin);
   eleventyConfig.addPlugin(pluginInclusiveLanguage);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
