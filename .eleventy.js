@@ -42,6 +42,7 @@ module.exports = (eleventyConfig) => {
 
       let result = sass.compileString(inputContent, {
         loadPaths: [parsed.dir || ".", this.config.dir.includes],
+        style: "compressed",
       });
 
       // This is the render function, `data` is the full data cascade
