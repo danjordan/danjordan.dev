@@ -22,12 +22,12 @@ a:visited {
 
 a:hover {
   border-width: 0;
-  color:$color-fade;
+  color: $color-fade;
 }
 
 a:focus {
   border-bottom: 0;
-  color:$color-fade;
+  color: $color-fade;
   outline: 4px solid $color-fade;
   outline-offset: 2px;
 }
@@ -98,5 +98,5 @@ main {
 
 footer {
   font-size: 0.8em;
-  text-align:center;
+  text-align: center;
 }
