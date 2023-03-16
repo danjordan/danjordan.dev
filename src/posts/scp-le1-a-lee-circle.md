@@ -4,6 +4,7 @@ slug: scp-le1-a-lee-circle
 tags:
   - posts
 title: SCP LE1-A - Lee Circle
+description: SCP-LE1-A is a multi-story car park located in Lee Circle, Leicester, England. The building consists of six levels, including the ground floor, and can accommodate approximately 100 vehicles.
 ---
 
 **Item #:** SCP-LE1-A
