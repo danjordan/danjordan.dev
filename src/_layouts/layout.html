@@ -7,7 +7,7 @@
 
     <link rel="icon" href="{{ '/favicon.svg' | url }}" />
 
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/css/index.css' | rev | url }}" />
 
     {% for post in collections.posts | reverse | take(5) %}
     <link rel="prefetch" href="{{ post.url | url }}" />
