@@ -1,5 +1,6 @@
 const htmlmin = require("html-minifier");
 const format = require("date-fns/format");
+const Image = require("@11ty/eleventy-img");
 const pluginRev = require("eleventy-plugin-rev");
 const pluginEleventySass = require("eleventy-sass");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -33,13 +34,52 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-  eleventyConfig.addPassthroughCopy("src/img/1px.png");
+  eleventyConfig.addPassthroughCopy("src/img/*");
   eleventyConfig.addPassthroughCopy("src/_headers");
   eleventyConfig.addPassthroughCopy("src/browserconfig.xml");
   eleventyConfig.addPassthroughCopy("src/favicon.svg");
   eleventyConfig.addPassthroughCopy("src/humans.txt");
   eleventyConfig.addPassthroughCopy("src/manifest.json");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "Image",
+    async (src, alt, className) => {
+      if (!alt) {
+        throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+      }
+
+      let stats = await Image(src, {
+        widths: [25, 320, 640, 960, 1200, 1800, 2400],
+        formats: ["jpeg", "png", "webp"],
+        urlPath: "/img/",
+        outputDir: "./_site/img/",
+      });
+
+      let lowestSrc = stats["jpeg"][0];
+
+      const srcset = Object.keys(stats).reduce(
+        (acc, format) => ({
+          ...acc,
+          [format]: stats[format].reduce(
+            (_acc, curr) => `${_acc} ${curr.srcset} ,`,
+            ""
+          ),
+        }),
+        {}
+      );
+
+      const img = `<img
+        alt="${alt}"
+        class="${className}"
+        src="${lowestSrc.url}"
+        sizes='(min-width: 1024px) 1024px, 100vw'
+        srcset="${srcset["jpeg"]}"
+      >`;
+
+      return img;
+    }
+  );
 
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {

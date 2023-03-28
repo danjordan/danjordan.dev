@@ -5,6 +5,7 @@
 @import "utils";
 
 body {
+  font-size: $font-size-base;
   max-width: 60ch;
 }
 
@@ -56,18 +57,6 @@ table {
   margin-bottom: 2.5rem;
 }
 
-@media (max-width: 684px) {
-  body {
-    font-size: $font-size-base;
-  }
-}
-
-@media (max-width: 382px) {
-  body {
-    font-size: $font-size-base;
-  }
-}
-
 .skiplink {
   position: absolute;
   left: -9999em;
@@ -94,6 +83,15 @@ table {
 
 main {
   margin-bottom: 4rem;
+}
+
+@media (min-width: 900px) {
+  .right-img {
+    float: right;
+    margin-left: 2.5rem;
+    margin-right: -10%;
+    width: 50%;
+  }
 }
 
 footer {
