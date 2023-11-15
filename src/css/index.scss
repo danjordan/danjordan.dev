@@ -46,7 +46,13 @@ nav {
 
 article h1 {
   font-size: 2.35em;
+  margin-bottom: 0;
+}
+
+time {
+  display: block;
   margin-bottom: 4rem;
+  text-align: center;
 }
 
 pre[class*="language-"] {

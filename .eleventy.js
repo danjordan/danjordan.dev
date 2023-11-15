@@ -26,6 +26,11 @@ module.exports = (eleventyConfig) => {
     return format(utc, "yyyy-MM-dd");
   });
 
+  eleventyConfig.addFilter("toHumanReadable", (date) => {
+    const utc = zonedTimeToUtc(date);
+    return format(utc, "ko MMMM u");
+  });
+
   eleventyConfig.addPlugin(pluginInclusiveLanguage);
   eleventyConfig.addPlugin(pluginEleventySass, {
     rev: true,
