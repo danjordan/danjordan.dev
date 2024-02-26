@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy && npx @divriots/jampack ./_site --onlycomp",
     "debug": "DEBUG=* eleventy",
     "dev": "eleventy --serve"
   },
