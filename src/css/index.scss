@@ -1,11 +1,7 @@
-@import "../../node_modules/normalize.css/normalize";
-@import "sakura-theme";
-@import "../../node_modules/sakura.css/scss/_main";
 @import "../../node_modules/dracula-prism/dist/css/dracula-prism";
 @import "utils";
 
 body {
-  font-size: $font-size-base;
   max-width: 60ch;
 }
 
@@ -17,24 +13,16 @@ a {
   border-bottom: 2px solid;
 }
 
-a:visited {
-  color: $color-blossom;
-}
-
 a:hover {
   border-width: 0;
-  color: $color-fade;
 }
 
 a:focus {
   border-bottom: 0;
-  color: $color-fade;
-  outline: 4px solid $color-fade;
   outline-offset: 2px;
 }
 
 header {
-  @extend h1;
   font-size: 2.35em;
   text-align: center;
 }

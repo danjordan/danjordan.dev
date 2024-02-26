@@ -1,0 +1,23 @@
+@import "sakura-light";
+@import "../../node_modules/sakura.css/scss/_main";
+
+body {
+  font-size: $font-size-base;
+}
+
+a:visited {
+  color: $color-blossom;
+}
+
+a:hover {
+  color: $color-fade;
+}
+
+a:focus {
+  color: $color-fade;
+  outline: 4px solid $color-fade;
+}
+
+header {
+  @extend h1;
+}
