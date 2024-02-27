@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "eleventy && npx @divriots/jampack ./_site --onlycomp",
+    "build": "eleventy",
     "debug": "DEBUG=* eleventy",
     "dev": "eleventy --serve"
   },
@@ -16,7 +16,6 @@
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@divriots/jampack": "0.22.0",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",
     "dracula-prism": "^2.1.16",
