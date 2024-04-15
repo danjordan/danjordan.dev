@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "eleventy",
+    "build": "rm -rf _site && eleventy && npx @divriots/jampack ./_site --onlycomp",
     "debug": "DEBUG=* eleventy",
     "dev": "eleventy --serve"
   },
@@ -25,5 +25,8 @@
     "normalize.css": "^8.0.1",
     "sakura.css": "^1.4.1"
   },
-  "repository": "git@github.com:danjordan/danjordan.dev.git"
+  "repository": "git@github.com:danjordan/danjordan.dev.git",
+  "devDependencies": {
+    "@divriots/jampack": "^0.23.4"
+  }
 }
