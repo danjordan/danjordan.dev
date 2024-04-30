@@ -13,16 +13,16 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "@11ty/eleventy-img": "^4.0.0",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "@unpic/webc": "^0.0.43",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",
     "dracula-prism": "^2.1.16",
     "eleventy-plugin-rev": "^2.0.0",
     "eleventy-sass": "^2.2.1",
-    "html-minifier": "^4.0.0",
     "normalize.css": "^8.0.1",
     "sakura.css": "^1.4.1"
   },
