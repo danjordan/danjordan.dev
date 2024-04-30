@@ -56,7 +56,16 @@
       title="{{ metadata.title }}"
     />
     <link rel="manifest" href="{{ '/manifest.json' | url }}" />
-    <meta name="theme-color" content="#2e3037" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#ffffff"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#2e3037"
+    />
   </head>
   <body>
     <div id="skiplink-container">

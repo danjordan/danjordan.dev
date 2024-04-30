@@ -5,7 +5,8 @@
   "scripts": {
     "build": "rm -rf _site && eleventy && npx @divriots/jampack ./_site --onlycomp",
     "debug": "DEBUG=* eleventy",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "preinstall": "npx only-allow pnpm"
   },
   "keywords": [],
   "author": "Dan Jordan <dan@dan-jordan.co.uk>",
@@ -27,6 +28,6 @@
   },
   "repository": "git@github.com:danjordan/danjordan.dev.git",
   "devDependencies": {
-    "@divriots/jampack": "^0.23.4"
+    "@divriots/jampack": "^0.24.0"
   }
 }
