@@ -7,7 +7,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginInclusiveLanguage from "@11ty/eleventy-plugin-inclusive-language";
 
-export default async function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addCollection("pages", (collectionApi) => {
     return collectionApi.getAllSorted().filter((item) => {
       // Remove css files that get added by addExtension
