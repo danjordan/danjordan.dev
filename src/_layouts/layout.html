@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width" />
     <title>{{ renderData.title or title or metadata.title }}</title>
 
-    <link rel="stylesheet" href="{{ '/css/normalize.css' | rev | url }}" />
+    <link rel="stylesheet" href="{{ '/css/normalize.css' | url }}" />
 
     <link
       rel="stylesheet"
-      href="{{ '/css/light.css' | rev | url }}"
+      href="{{ '/css/light.css' | url }}"
       media="(prefers-color-scheme: light)"
     />
 
     <link
       rel="stylesheet"
-      href="{{ '/css/dark.css' | rev | url }}"
+      href="{{ '/css/dark.css' | url }}"
       media="(prefers-color-scheme: dark)"
     />
 
-    <link rel="stylesheet" href="{{ '/css/index.css' | rev | url }}" />
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}" />
 
     {% for post in collections.posts | reverse | take(5) %}
     <link rel="prefetch" href="{{ post.url | url }}" />

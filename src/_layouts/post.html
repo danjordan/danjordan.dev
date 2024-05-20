@@ -5,7 +5,9 @@ layout: layout.html
 <article>
   <h1 class="text-center">{{ title }}</h1>
   <p>
-    <time datetime="{{ date | toIsoStringShort }}">{{ date | toHumanReadable }}</time>
+    <time datetime="{{ date | toIsoStringShort }}"
+      >{{ date | toHumanReadable }}</time
+    >
   </p>
   {{ content | safe }}
 </article>

@@ -1,14 +1,13 @@
-const format = require("date-fns/format");
-const pluginRev = require("eleventy-plugin-rev");
-const pluginEleventySass = require("eleventy-sass");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginWebc = require("@11ty/eleventy-plugin-webc");
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
-const zonedTimeToUtc = require("date-fns-tz/zonedTimeToUtc");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginInclusiveLanguage = require("@11ty/eleventy-plugin-inclusive-language");
+import format from "date-fns/format";
+import pluginSass from "./_11ty/sassPlugin.js";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import pluginWebc from "@11ty/eleventy-plugin-webc";
+import { EleventyRenderPlugin } from "@11ty/eleventy";
+import { fromZonedTime } from "date-fns-tz";
+import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginInclusiveLanguage from "@11ty/eleventy-plugin-inclusive-language";
 
-module.exports = (eleventyConfig) => {
+export default async function (eleventyConfig) {
   eleventyConfig.addCollection("pages", (collectionApi) => {
     return collectionApi.getAllSorted().filter((item) => {
       // Remove css files that get added by addExtension
@@ -22,21 +21,18 @@ module.exports = (eleventyConfig) => {
   });
 
   eleventyConfig.addFilter("toIsoStringShort", (date) => {
-    const utc = zonedTimeToUtc(date);
+    const utc = fromZonedTime(date);
     return format(utc, "yyyy-MM-dd");
   });
 
   eleventyConfig.addFilter("toHumanReadable", (date) => {
-    const utc = zonedTimeToUtc(date);
+    const utc = fromZonedTime(date);
     return format(utc, "ko MMMM u");
   });
 
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginInclusiveLanguage);
-  eleventyConfig.addPlugin(pluginEleventySass, {
-    rev: true,
-  });
-  eleventyConfig.addPlugin(pluginRev);
+  eleventyConfig.addPlugin(pluginSass);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginWebc);
@@ -58,4 +54,4 @@ module.exports = (eleventyConfig) => {
     },
     htmlTemplateEngine: "njk",
   };
-};
+}
