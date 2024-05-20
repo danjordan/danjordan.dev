@@ -1,3 +1,4 @@
 _site
+.cache
 .jampack
 node_modules

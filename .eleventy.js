@@ -1,9 +1,9 @@
 import format from "date-fns/format";
+import { fromZonedTime } from "date-fns-tz";
 import pluginSass from "./_11ty/sassPlugin.js";
 import pluginRss from "@11ty/eleventy-plugin-rss";
-import pluginWebc from "@11ty/eleventy-plugin-webc";
 import { EleventyRenderPlugin } from "@11ty/eleventy";
-import { fromZonedTime } from "date-fns-tz";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginInclusiveLanguage from "@11ty/eleventy-plugin-inclusive-language";
 
@@ -35,7 +35,25 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSass);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
-  eleventyConfig.addPlugin(pluginWebc);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    // which file extensions to process
+    extensions: "html",
+
+    // Add any other Image utility options here:
+
+    // optional, output image formats
+    formats: ["webp", "jpeg"],
+    // formats: ["auto"],
+
+    // optional, output image widths
+    widths: [716],
+
+    // optional, attributes assigned on <img> override these values.
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+    },
+  });
 
   eleventyConfig.addPassthroughCopy("src/img/*");
   eleventyConfig.addPassthroughCopy("src/_headers");
