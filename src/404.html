@@ -10,15 +10,48 @@ permalink: /404.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dan Jordan | Page Not Found</title>
 
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="{{ '/css/normalize.css' | url }}" />
+
+    <link
+      rel="stylesheet"
+      href="{{ '/css/light.css' | url }}"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ '/css/dark.css' | url }}"
+      media="(prefers-color-scheme: dark)"
+    />
 
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}" />
 
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="{{ '/favicon.svg' | url }}" />
+
     <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#2e3037" />
+
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#ffffff"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#2e3037"
+    />
   </head>
 
   <body>
+    <div id="skiplink-container">
+      <div>
+        <a class="skiplink" href="#maincontent">Skip to main content</a>
+      </div>
+    </div>
+
     <header>
       <a href="/">Dan Jordan</a>
     </header>
