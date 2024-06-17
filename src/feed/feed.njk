@@ -1,9 +1,14 @@
----
-permalink: feed/feed.xml
-eleventyExcludeFromCollections: true
+---json
+{
+  "permalink": "feed/feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "language": "en"
+  }
+}
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}">
 	<id>{{ metadata.feed.id }}</id>
 	<title>{{ metadata.title }}</title>
 	{% if (collections.posts.length) %}
@@ -11,18 +16,17 @@ eleventyExcludeFromCollections: true
 	{% endif %}
 	<author>
 		<name>{{ metadata.author.name }}</name>
-		<email>{{ metadata.author.email }}</email>
 	</author>
 	<link href="{{ metadata.feed.url }}" rel="self" type="application/rss+xml" />
 	<link href="{{ metadata.url }}"/>
-	{%- for post in collections.posts %}
-	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+	{%- for post in collections.posts | reverse %}
+	{% set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.url) }}{% endset %}
 	<entry>
 		<id>{{ absolutePostUrl }}</id>
 		<title>{{ post.data.title }}</title>
 		<link href="{{ absolutePostUrl }}"/>
 		<updated>{{ post.date | dateToRfc3339 }}</updated>
-		<content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+		<content type="html">{{ post.templateContent | renderTransforms(post.data.page, metadata.url) }}</content>
 	</entry>
 	{%- endfor %}
 </feed>
