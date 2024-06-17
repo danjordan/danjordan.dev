@@ -1,5 +1,5 @@
-import sass from "sass";
 import path from "node:path";
+import * as sass from "sass";
 
 export default function (eleventyConfig) {
   eleventyConfig.addTemplateFormats("scss");
