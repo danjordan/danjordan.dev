@@ -8,20 +8,20 @@ export default function (eleventyConfig) {
     outputFileExtension: "css",
 
     compile: function (inputContent, inputPath) {
-      let parsed = path.parse(inputPath);
+      const parsed = path.parse(inputPath);
 
       // skip underscore file names
       if (parsed.name.startsWith("_")) {
         return;
       }
 
-      let result = sass.compileString(inputContent, {
+      const result = sass.compileString(inputContent, {
         loadPaths: [parsed.dir || ".", this.config.dir.includes],
       });
 
       this.addDependencies(inputPath, result.loadedUrls);
 
-      return (data) => {
+      return () => {
         return result.css;
       };
     },

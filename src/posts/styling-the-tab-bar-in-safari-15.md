@@ -1,8 +1,7 @@
 ---
 date: 2021-06-12
 slug: styling-the-tab-bar-in-safari-15
-tags:
-  - posts
+tags: posts
 title: Styling the Tab Bar in Safari 15
 ---
 
@@ -63,11 +62,9 @@ There are four different `safe-area-inset-x` values and `env()` provides a secon
 
 ```css
 body {
-  padding:
-    env(safe-area-inset-top)
-    env(safe-area-inset-right, 20px)
-    env(safe-area-inset-bottom)
-    env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right, 20px) env(
+      safe-area-inset-bottom
+    ) env(safe-area-inset-left, 20px);
 }
 ```
 

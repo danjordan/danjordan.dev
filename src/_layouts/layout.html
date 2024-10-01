@@ -21,10 +21,6 @@
 
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}" />
 
-    {% for post in collections.posts | reverse | take(5) %}
-    <link rel="prefetch" href="{{ post.url | url }}" />
-    {% endfor %}
-
     <meta
       name="description"
       content="{{ renderData.description or description or metadata.description }}"
