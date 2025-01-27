@@ -14,19 +14,19 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "3.0.0",
-    "@11ty/eleventy-img": "^5.0.0",
+    "@11ty/eleventy-img": "^6.0.0",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
-    "@11ty/eleventy-plugin-rss": "^2.0.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
     "dracula-prism": "^2.1.16",
     "normalize.css": "^8.0.1",
     "sakura.css": "^1.5.0",
-    "sass": "^1.81.0"
+    "sass": "^1.83.4"
   },
   "repository": "git@github.com:danjordan/danjordan.dev.git",
   "devDependencies": {
-    "@divriots/jampack": "^0.30.0"
+    "@divriots/jampack": "^0.33.0"
   }
 }

@@ -1,5 +1,5 @@
-@import "../../node_modules/dracula-prism/dist/css/dracula-prism";
-@import "utils";
+@use "../../node_modules/dracula-prism/dist/css/dracula-prism";
+@use "utils";
 
 body {
   max-width: 60ch;
