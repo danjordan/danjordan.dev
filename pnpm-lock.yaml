@@ -21,8 +21,8 @@ importers:
         specifier: ^2.0.4
         version: 2.0.4
       '@11ty/eleventy-plugin-syntaxhighlight':
-        specifier: ^5.0.1
-        version: 5.0.1
+        specifier: ^5.0.2
+        version: 5.0.2
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -39,12 +39,12 @@ importers:
         specifier: ^1.5.1
         version: 1.5.1
       sass:
-        specifier: ^1.89.2
-        version: 1.89.2
+        specifier: ^1.94.2
+        version: 1.94.2
     devDependencies:
       '@divriots/jampack':
-        specifier: ^0.33.1
-        version: 0.33.1(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
+        specifier: ^0.34.0
+        version: 0.34.0(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
 
 packages:
 
@@ -77,8 +77,8 @@ packages:
   '@11ty/eleventy-plugin-rss@2.0.4':
     resolution: {integrity: sha512-LF60sGVlxGTryQe3hTifuzrwF8R7XbrNsM2xfcDcNMSliLN4kmB+7zvoLRySRx0AQDjqhPTAeeeT0ra6/9zHUQ==}
 
-  '@11ty/eleventy-plugin-syntaxhighlight@5.0.1':
-    resolution: {integrity: sha512-xDPF3Ay38XlmWZe9ER0SLtMmNah7olUBlGORhUiCUkPh3jYGVCDTDayi4tbFI9Dxha8NwKlfBZ2FXM/s3aZzAg==}
+  '@11ty/eleventy-plugin-syntaxhighlight@5.0.2':
+    resolution: {integrity: sha512-T6xVVRDJuHlrFMHbUiZkHjj5o1IlLzZW+1IL9eUsyXFU7rY2ztcYhZew/64vmceFFpQwzuSfxQOXxTJYmKkQ+A==}
 
   '@11ty/eleventy-utils@2.0.7':
     resolution: {integrity: sha512-6QE+duqSQ0GY9rENXYb4iPR4AYGdrFpqnmi59tFp9VrleOl0QSh8VlBr2yd6dlhkdtj7904poZW5PvGr9cMiJQ==}
@@ -110,8 +110,8 @@ packages:
     resolution: {integrity: sha512-kQUVEgMDj0yE7LOdrDhKOC8JkfUzUKsUqp8m9WQDiSxim8Bnga+80opjXaCtHLhO3/W3DIZMow8QXtXUqNS+zA==}
     engines: {node: '>= 6'}
 
-  '@divriots/jampack@0.33.1':
-    resolution: {integrity: sha512-Fa6dBAZnsZwDYj9YkZQMoP4Ma95saGJtSwPrd1KI5IrKvhgUL4SWB05K7KbV183wmuyPgSBxGxZVowcLko5Vfw==}
+  '@divriots/jampack@0.34.0':
+    resolution: {integrity: sha512-cD+Li/X+EoqxDfmHaklFq/4RrNARIqeIYt4KDSbZja0w06XWWpYo8q4yLoAOUvIAF7+hKRGKXcQxA+4igOVy/g==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -1523,8 +1523,8 @@ packages:
   sakura.css@1.5.1:
     resolution: {integrity: sha512-MAL13eVLmTuiF6a/SjrzK5PItWQwMrsIIldLq7kVwuJjxoxVyzwGJbP+JNSwLt34VF8Eg9yj3q17GG/h8jhvMA==}
 
-  sass@1.89.2:
-    resolution: {integrity: sha512-xCmtksBKd/jdJ9Bt9p7nPKiuqrlBMBuuGkQlkhZjjQk3Ty48lv93k5Dq6OPkKt4XwxDJ7tvlfrTa1MPA9bf+QA==}
+  sass@1.94.2:
+    resolution: {integrity: sha512-N+7WK20/wOr7CzA2snJcUSSNTCzeCGUTFY3OgeQP3mZ1aj9NMQ0mSTXwlrnd89j33zzQJGqIN52GIOmYrfq46A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -1808,7 +1808,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@11ty/eleventy-plugin-syntaxhighlight@5.0.1':
+  '@11ty/eleventy-plugin-syntaxhighlight@5.0.2':
     dependencies:
       prismjs: 1.30.0
 
@@ -1888,7 +1888,7 @@ snapshots:
       undici: 5.29.0
       whatwg-mimetype: 3.0.0
 
-  '@divriots/jampack@0.33.1(react-dom@16.14.0(react@16.14.0))(react@16.14.0)':
+  '@divriots/jampack@0.34.0(react-dom@16.14.0(react@16.14.0))(react@16.14.0)':
     dependencies:
       '@commander-js/extra-typings': 12.1.0(commander@12.1.0)
       '@divriots/cheerio': 1.0.0-rc.12
@@ -3123,7 +3123,7 @@ snapshots:
 
   sakura.css@1.5.1: {}
 
-  sass@1.89.2:
+  sass@1.94.2:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.1.3
