@@ -1,0 +1,118 @@
+[
+  {
+    "id": "ic63",
+    "title": "IC 63 - The Ghost of Cassiopeia",
+    "photos": [
+      {
+        "src": "/astrophotography/ic63.jpg",
+        "date": "23rd November 2025"
+      }
+    ]
+  },
+  {
+    "id": "ic1795",
+    "title": "IC 1795 - The Fish Head Nebula",
+    "photos": [
+      {
+        "src": "/astrophotography/ic1795.jpg",
+        "date": "4th December 2025"
+      }
+    ]
+  },
+  {
+    "id": "m27",
+    "title": "M27 - Dumbbell Nebula",
+    "photos": [
+      {
+        "src": "/astrophotography/m27.jpg",
+        "date": "2nd November 2025"
+      }
+    ]
+  },
+  {
+    "id": "m31",
+    "title": "M31 - Andromeda Galaxy",
+    "photos": [
+      {
+        "src": "/astrophotography/m31.jpg",
+        "date": "1st November 2025"
+      }
+    ]
+  },
+  {
+    "id": "m33",
+    "title": "M33 - Triangulum Galaxy",
+    "photos": [
+      {
+        "src": "/astrophotography/m33.jpg",
+        "date": "17th November 2025"
+      },
+      {
+        "src": "/astrophotography/m33-2.jpg",
+        "date": "9th December 2025"
+      }
+    ]
+  },
+  {
+    "id": "m45",
+    "title": "M45 - Pleiades",
+    "photos": [
+      {
+        "src": "/astrophotography/m45.jpg",
+        "date": "17th November 2025"
+      }
+    ]
+  },
+  {
+    "id": "ngc281",
+    "title": "NGC 281 - Pacman Nebula",
+    "photos": [
+      {
+        "src": "/astrophotography/ngc281.jpg",
+        "date": "17th November 2025"
+      }
+    ]
+  },
+  {
+    "id": "ngc891",
+    "title": "NGC 891 - Silver Sliver Galaxy",
+    "photos": [
+      {
+        "src": "/astrophotography/ngc891.jpg",
+        "date": "20th November 2025"
+      },
+      {
+        "src": "/astrophotography/ngc891-2.jpg",
+        "date": "7th December 2025"
+      }
+    ]
+  },
+  {
+    "id": "moon",
+    "title": "The Moon",
+    "photos": [
+      {
+        "src": "/astrophotography/moon.jpg",
+        "date": "30th November 2025"
+      },
+      {
+        "src": "/astrophotography/moon-2.jpg",
+        "date": "4th December 2025"
+      },
+      {
+        "src": "/astrophotography/moon-3.jpg",
+        "date": "10th December 2025"
+      }
+    ]
+  },
+  {
+    "id": "sun",
+    "title": "The Sun",
+    "photos": [
+      {
+        "src": "/astrophotography/sun.jpg",
+        "date": "22nd October 2025"
+      }
+    ]
+  }
+]

@@ -51,6 +51,15 @@ table {
   margin-bottom: 2.5rem;
 }
 
+picture {
+  display: block;
+  line-height: 0;
+}
+
+figcaption {
+  font-size: 1.75rem;
+}
+
 .skiplink {
   position: absolute;
   left: -9999em;
