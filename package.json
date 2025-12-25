@@ -23,7 +23,7 @@
     "dracula-prism": "^2.1.16",
     "normalize.css": "^8.0.1",
     "sakura.css": "^1.5.1",
-    "sass": "^1.94.2"
+    "sass": "^1.97.1"
   },
   "repository": "git@github.com:danjordan/danjordan.dev.git",
   "devDependencies": {

@@ -20,6 +20,16 @@
     ]
   },
   {
+    "id": "ic1805",
+    "title": "IC 1805 - The Heart Nebula",
+    "photos": [
+      {
+        "src": "/astrophotography/ic1805.jpg",
+        "date": "19th December 2025"
+      }
+    ]
+  },
+  {
     "id": "m27",
     "title": "M27 - Dumbbell Nebula",
     "photos": [
@@ -64,6 +74,16 @@
     ]
   },
   {
+    "id": "m81",
+    "title": "M81 - Bode's Galaxy",
+    "photos": [
+      {
+        "src": "/astrophotography/m81.jpg",
+        "date": "25th December 2025"
+      }
+    ]
+  },
+  {
     "id": "ngc281",
     "title": "NGC 281 - Pacman Nebula",
     "photos": [
@@ -84,6 +104,16 @@
       {
         "src": "/astrophotography/ngc891-2.jpg",
         "date": "7th December 2025"
+      }
+    ]
+  },
+  {
+    "id": "sh2-171",
+    "title": "SH2-171 - The Teddy Bear Nebula",
+    "photos": [
+      {
+        "src": "/astrophotography/sh2-171.jpg",
+        "date": "19th December 2025"
       }
     ]
   },
