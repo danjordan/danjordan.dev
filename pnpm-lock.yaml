@@ -39,8 +39,8 @@ importers:
         specifier: ^1.5.1
         version: 1.5.1
       sass:
-        specifier: ^1.97.2
-        version: 1.97.2
+        specifier: ^1.97.3
+        version: 1.97.3
     devDependencies:
       '@divriots/jampack':
         specifier: ^0.34.0
@@ -1527,8 +1527,8 @@ packages:
   sakura.css@1.5.1:
     resolution: {integrity: sha512-MAL13eVLmTuiF6a/SjrzK5PItWQwMrsIIldLq7kVwuJjxoxVyzwGJbP+JNSwLt34VF8Eg9yj3q17GG/h8jhvMA==}
 
-  sass@1.97.2:
-    resolution: {integrity: sha512-y5LWb0IlbO4e97Zr7c3mlpabcbBtS+ieiZ9iwDooShpFKWXf62zz5pEPdwrLYm+Bxn1fnbwFGzHuCLSA9tBmrw==}
+  sass@1.97.3:
+    resolution: {integrity: sha512-fDz1zJpd5GycprAbu4Q2PV/RprsRtKC/0z82z0JLgdytmcq0+ujJbJ/09bPGDxCLkKY3Np5cRAOcWiVkLXJURg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3127,7 +3127,7 @@ snapshots:
 
   sakura.css@1.5.1: {}
 
-  sass@1.97.2:
+  sass@1.97.3:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.1.4
